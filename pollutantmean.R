@@ -7,6 +7,6 @@ pollutantmean<-function(directory,pollutant,id=1:332){
   {
     da<-rbind(da,read.csv(fl[i]))                           #read specified files
   }
-  mean<-round(mean(da[,pollutant],na.rm=TRUE), digits = 3)  #calculate mean and round to 3 decimals
+  mean<-round(da[,pollutant],na.rm=TRUE)                    #calculate mean and round to 3 decimals
   mean                                                      #print the mean
 }
